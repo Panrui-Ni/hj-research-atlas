@@ -1,65 +1,30 @@
-# Contributing to HJ Atlas / 参与建设
+# Contributing to HJ Atlas
 
-This is a community map, **not** a ranking of people, journals or research topics.
+The purpose of this index is to clarify **mathematical increments**, not to grade papers or reproduce authors' abstracts.
 
-## Three ways to participate
+## Easy way to contribute
 
-1. **Discuss:** use the topic's discussion panel (GitHub login required) or start a GitHub Discussion. Replies and constructive disagreement are welcome.
-2. **Propose:** use the “Research topic / open question proposal” issue template to suggest a branch, paper, conjecture or link between topics.
-3. **Correct:** submit a pull request editing `data/atlas.json`, or use the correction issue template.
+Open a GitHub Issue from the repository's **Issues → New issue** page. Provide the arXiv URL and one or two sentences about an exact claim or missing predecessor. You do not need to learn Git to suggest a correction.
 
-## Mathematical data standards
+For direct edits, modify `data/atlas.json` and submit a Pull Request.
 
-A claim should name its *precise hypotheses*, *conclusion*, *source*, and ideally *theorem number / paper version*. Mark conjectures and open questions explicitly. Never infer novelty, priority, mathematical correctness or sharpness from the paper title or journal alone. Separate four dimensions:
+## Standards for an entry
 
-- **Correctness:** what exactly was checked, by whom, and against which version?
-- **Scope:** assumptions, domain, regularity, boundary conditions and quantifiers.
-- **Relationship:** generalization, weakening an assumption, improvement, counterexample, alternate proof, or related problem.
-- **Significance:** use optional, anonymous, dimension-specific ordinal judgements and public reasoning; do not conflate with correctness or a single numerical score.
+1. **Verify the source.** The arXiv URL must open the actual intended paper. Check title, authors, and year against the source. An unverified journal name should be left blank.
+2. **Identify the predecessor.** State which earlier theorem, rate, class of Hamiltonians, proof method, or counterexample the paper improves or contrasts with. Cite or link the predecessor if possible.
+3. **State the mathematical change precisely.** Examples: "extends from quadratic to general uniformly convex Hamiltonians with C³ regularity"; "proves optimal O(ε) rather than the prior O(ε^(1/3)) bound"; "provides a nonconvergence counterexample".
+4. **Record scope.** Specify convexity, regularity, dimensionality, stochastic assumptions, monotonicity, boundedness, or model restrictions relevant to the result.
+5. **No prestige or personality judgments.** Journal name is metadata. Do not use "breakthrough", "seminal", "minor", "trivial", "low tier", "landmark" or similar value-loaded adjectives in mathematical comparisons.
+6. **Keep it brief.** One sentence per field is generally enough. Use mathematical notation in readable plain text, e.g., `O(ε)`, `λ→0`, or `H_pp>0`.
+7. **Allow disagreement.** If a contribution's priority or relationship to earlier work is contested, open a discussion and identify the disputed theorem. Record the uncertainty instead of forcing a consensus.
+8. **Follow respectful, professional academic conduct.** Critique assumptions, statements, methods, and proofs, not individual mathematicians.
 
-AI-generated entries must be labeled as such in the proposal and manually reviewed before publication. A citation link does not imply independent verification.
+## Scope
 
-## Add a topic
+Vanishing discount; contact HJ; weak KAM; homogenization; boundary problems; coupled systems; mean field games; HJ equations on probability measures. Branches may be expanded through community proposals.
 
-Open `data/atlas.json` in the GitHub web editor, choose a branch in `branches`, and add a unique topic inside its `topics` array:
+A work need not be published in any named journal to be eligible. Conversely, publication in a prominent journal does not make it automatically more important or prioritized in this index.
 
-```json
-{
-  "id": "new-topic-id",
-  "zh": "中文主题名称",
-  "en": "English topic name",
-  "summary": "研究对象及范围。",
-  "refs": ["existing-reference-id"],
-  "questions": ["一个待核查的研究问题？"],
-  "links": ["existing-topic-id"]
-}
-```
+## Review process
 
-For a new paper, first add its bibliographic record in `references` with `id, authors, title, year, venue, url, type`; refer to its ID from the topic. Optionally add `formula` with LaTeX (double-escape backslashes in JSON), and `results` only if the theorem's exact assumptions and claims have been checked.
-
-Submit a pull request. An automatic check validates IDs and cross-references. The team will discuss conflicts, not simply delete minority views.
-
-## Governance: initial commitments
-
-- All research areas may be proposed; subject editors are *maintainers*, not arbiters of research value.
-- Publish the provenance of corrections and material changes in pull requests.
-- Disagreement about mathematical interpretation may be documented in discussions instead of suppressed.
-- A small initial group of maintainers approves changes for quality; the governance rules themselves can be amended through public discussions.
-- No claim that a paper is “verified” without an explicit, reproducible review record.
-
-## Code of conduct
-
-Critique proofs, assumptions and evidence, not personal attributes. No harassment, personal attacks, doxxing, or knowingly fabricated citations. Moderation should be transparent and proportionate. The project is not a replacement for formal peer review.
-
-## Experimental anonymous ratings
-
-Ratings concern individual **papers** (not authors, institutions, or journals). Each field is optional: **conceptual novelty**, **methodological novelty**, **technical depth**, **systematicity**, and **generality**. Four grades mean:
-
-- **极高 (Very high):** groundbreaking contributions or fundamentally new frameworks in that dimension.
-- **高 (High):** substantial new progress beyond prior work.
-- **一般 (Moderate):** real original contribution, but primarily incremental work within an established research program. This is **not** a negative judgement.
-- **较低 (Low):** limited new content within that dimension, such as relatively direct extensions.
-
-**Not sure** means abstain; it is not scored. Ratings have no aggregate paper score, no percentile and no ranking. Peer review and mathematical correctness must be established separately. Strong disagreement is expected; readers should compare the source articles and can explain the difference in publicly attributable comments. Please avoid coordinated voting, self-ratings and conflicts of interest.
-
-The rating system is in pilot phase. It may be disabled if significant abuse is detected.
+Editors check references, wording, data schema, and mathematical relationships. Inclusion does not imply independent verification of every proof. Corrections and discussions remain open.

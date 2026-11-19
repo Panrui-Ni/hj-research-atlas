@@ -1,30 +1,23 @@
 #!/usr/bin/env python3
-"""Small repository consistency validator; runs on every pull request."""
-import json
-import re
+"""Check the data schema and internal links; does not verify mathematical claims."""
+import json,re,sys
 from pathlib import Path
-from urllib.parse import urlparse
-
-source = Path(__file__).parent.parent / 'data' / 'atlas.json'
-data = json.loads(source.read_text(encoding='utf-8'))
-assert isinstance(data.get('branches'), list)
-assert isinstance(data.get('references'), list)
-ids = [t['id'] for b in data['branches'] for t in b['topics']]
-branch_ids = [b['id'] for b in data['branches']]
-ref_ids = [ref['id'] for ref in data['references']]
-for name, values in [('topic', ids), ('branch', branch_ids), ('reference', ref_ids)]:
-    assert len(set(values)) == len(values), f'duplicate {name} identifier'
-    for value in values:
-        assert re.fullmatch(r'[a-z0-9][a-z0-9-]*', value), f'invalid {name} identifier: {value}'
-for paper in data['references']:
-    assert urlparse(paper['url']).scheme == 'https', f"invalid URL: {paper['id']}"
-    assert paper.get('title') and paper.get('authors') and paper.get('year')
-for branch in data['branches']:
-    assert branch.get('zh') and branch.get('en')
-    for topic in branch['topics']:
-        assert topic.get('zh') and topic.get('en') and topic.get('summary')
-        assert not (set(topic.get('links',[])) - set(ids)), f"unknown linked topic in {topic['id']}"
-        assert not (set(topic.get('refs',[])) - set(ref_ids)), f"unknown paper ref in {topic['id']}"
-        for result in topic.get('results',[]):
-            assert result.get('ref') in ref_ids, f"unknown result source in {topic['id']}"
-print(f'OK: {len(branch_ids)} branches, {len(ids)} topics, {len(ref_ids)} papers')
+p=Path(__file__).resolve().parents[1]/'data'/'atlas.json'
+d=json.loads(p.read_text())
+bs={b['id']:set(b['topics']) for b in d['branches']}
+assert len(bs)==len(d['branches'])
+ids=set()
+for paper in d['papers']:
+    pid=paper['id']
+    assert pid not in ids, f'Duplicate ID: {pid}'
+    ids.add(pid)
+    assert paper['branch'] in bs, f'Unknown branch: {pid}'
+    assert paper['topic'] in bs[paper['branch']], f'Unknown topic: {pid}'
+    assert re.fullmatch(r'(\d{4}\.\d{4,5}|[a-z.-]+/\d{7})',paper['arxiv'],re.I),f'Bad arXiv id: {pid}'
+    assert 2000 <= paper['year'] <= 2100
+    for field in ('title','authors','contribution','context','scope'):
+        assert isinstance(paper[field],str) and paper[field].strip(),f'Missing {field}: {pid}'
+for paper in d['papers']:
+    for related in paper.get('related',[]):
+        assert related in ids and related != paper['id'],f'Bad related: {paper["id"]} → {related}'
+print(f'OK: {len(d["papers"])} papers, {len(bs)} branches, valid IDs and related references.')

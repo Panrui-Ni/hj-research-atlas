@@ -1,641 +1,686 @@
 {
-  "project": {
-    "name": "Hamilton–Jacobi Research Atlas",
-    "shortName": "HJ Atlas",
-    "tagline": "A living, community-curated map of Hamilton–Jacobi equations and neighboring fields.",
+  "about": {
+    "project": "HJ Atlas",
+    "edition": "Selected papers (arXiv posting years 2014–2026; 2014 foundational item published in 2016)",
     "updated": "2026-11-19",
-    "notice": "This is a community-oriented prototype. Entries and open-question prompts are examples; any mathematical assertion must be checked against the cited original paper."
+    "method": "Each note states the concrete mathematical change relative to earlier results, together with the scope of the theorem. Coverage is selective, not a survey of all publications in any journal. Venues are bibliographic metadata only."
   },
-  "references": [
-    {
-      "id": "cil1992",
-      "authors": "M. G. Crandall, H. Ishii, P.-L. Lions",
-      "title": "User’s guide to viscosity solutions of second order partial differential equations",
-      "year": 1992,
-      "venue": "Bull. Amer. Math. Soc.",
-      "url": "https://doi.org/10.1090/S0273-0979-1992-00266-5",
-      "type": "published"
-    },
-    {
-      "id": "dfiz2016",
-      "authors": "A. Davini, A. Fathi, R. Iturriaga, M. Zavidovique",
-      "title": "Convergence of the solutions of the discounted Hamilton–Jacobi equation",
-      "year": 2016,
-      "venue": "Invent. Math.",
-      "url": "https://arxiv.org/abs/1408.6712",
-      "type": "published"
-    },
-    {
-      "id": "dnyz2024",
-      "authors": "A. Davini, P. Ni, J. Yan, M. Zavidovique",
-      "title": "Convergence/divergence phenomena in the vanishing discount limit of Hamilton–Jacobi equations",
-      "year": 2024,
-      "venue": "arXiv preprint",
-      "url": "https://arxiv.org/abs/2411.13780",
-      "type": "preprint"
-    },
-    {
-      "id": "nyz2026",
-      "authors": "P. Ni, J. Yan, M. Zavidovique",
-      "title": "Selection of critical solutions in non-monotone vanishing discount problems",
-      "year": 2026,
-      "venue": "arXiv preprint",
-      "url": "https://arxiv.org/abs/2609.24032",
-      "type": "preprint"
-    },
-    {
-      "id": "nz2026",
-      "authors": "P. Ni, M. Zavidovique",
-      "title": "Nonlinear selection in vanishing discount problems for Hamilton–Jacobi equations",
-      "year": 2026,
-      "venue": "arXiv preprint",
-      "url": "https://arxiv.org/abs/2611.15399",
-      "type": "preprint"
-    },
-    {
-      "id": "mt2014",
-      "authors": "H. Mitake, H. V. Tran",
-      "title": "Homogenization of weakly coupled systems of Hamilton–Jacobi equations with fast switching rates",
-      "year": 2014,
-      "venue": "Arch. Ration. Mech. Anal.",
-      "url": "https://arxiv.org/abs/1204.2748",
-      "type": "published"
-    },
-    {
-      "id": "mn2026",
-      "authors": "H. Mitake, P. Ni",
-      "title": "Quantitative homogenization of convex Hamilton–Jacobi equations with Neumann type boundary conditions",
-      "year": 2026,
-      "venue": "Calc. Var. Partial Differential Equations",
-      "url": "https://doi.org/10.1007/s00526-026-03320-6",
-      "type": "published"
-    },
-    {
-      "id": "dz2017",
-      "authors": "A. Davini, M. Zavidovique",
-      "title": "Convergence of the solutions of discounted Hamilton–Jacobi systems",
-      "year": 2017,
-      "venue": "arXiv preprint",
-      "url": "https://arxiv.org/abs/1702.07530",
-      "type": "preprint"
-    },
-    {
-      "id": "mnt2026",
-      "authors": "H. Mitake, P. Ni, H. V. Tran",
-      "title": "Vanishing discount and viscosity selection problems for mechanical Hamilton–Jacobi equations",
-      "year": 2026,
-      "venue": "arXiv preprint",
-      "url": "https://arxiv.org/abs/2609.24009",
-      "type": "preprint"
-    },
-    {
-      "id": "ll2007",
-      "authors": "J.-M. Lasry, P.-L. Lions",
-      "title": "Mean field games",
-      "year": 2007,
-      "venue": "Japan. J. Math.",
-      "url": "https://www.ms.u-tokyo.ac.jp/~toshi/jjm/JJM_HP/contents/abstract/2-1/JJM0657-AB.pdf",
-      "type": "published"
-    },
-    {
-      "id": "ls2020",
-      "authors": "P.-L. Lions, P. E. Souganidis",
-      "title": "Homogenization of the backward-forward mean-field games systems in periodic environments",
-      "year": 2020,
-      "venue": "Rend. Lincei Mat. Appl.",
-      "url": "https://arxiv.org/abs/1909.01250",
-      "type": "published"
-    }
-  ],
   "branches": [
     {
-      "id": "foundations",
-      "zh": "基础理论",
-      "en": "Fundamental Theory",
-      "desc": "Viscosity solutions, comparison, regularity and boundary problems.",
-      "accent": "#28777a",
-      "topics": [
-        {
-          "id": "viscosity",
-          "zh": "黏性解",
-          "en": "Viscosity solutions",
-          "summary": "弱解概念、测试函数、稳定性与 Perron 方法。",
-          "formula": "F(x,u,Du,D^2u)=0",
-          "refs": [
-            "cil1992"
-          ],
-          "questions": [
-            "哪些比较原理可推广到非标准增长或非局部算子？"
-          ],
-          "links": [
-            "comparison",
-            "boundary"
-          ]
-        },
-        {
-          "id": "comparison",
-          "zh": "比较原理与唯一性",
-          "en": "Comparison & uniqueness",
-          "summary": "结构条件、doubling variables 和边界比较。",
-          "refs": [
-            "cil1992"
-          ],
-          "questions": [
-            "退化或耦合问题的最弱比较条件是什么？"
-          ],
-          "links": [
-            "viscosity",
-            "weak-coupling"
-          ]
-        },
-        {
-          "id": "regularity",
-          "zh": "正则性",
-          "en": "Regularity",
-          "summary": "Lipschitz、半凹性、半凸性与更高正则性。",
-          "refs": [],
-          "questions": [
-            "哪些几何条件决定全局半凹性？"
-          ],
-          "links": [
-            "boundary",
-            "contact-stability"
-          ]
-        },
-        {
-          "id": "boundary",
-          "zh": "边界条件",
-          "en": "Boundary conditions",
-          "summary": "Dirichlet、Neumann、状态约束及毛细边界条件。",
-          "refs": [
-            "mn2026"
-          ],
-          "questions": [
-            "边界几何及斜导数条件如何影响定量估计？"
-          ],
-          "links": [
-            "neumann-homogenization",
-            "viscosity"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "weak-kam",
-      "zh": "弱 KAM 与 Aubry–Mather",
-      "en": "Weak KAM & Aubry–Mather",
-      "desc": "Critical solutions, calibrated curves, minimizing measures and dynamical structures.",
-      "accent": "#8b6caf",
-      "topics": [
-        {
-          "id": "critical-equation",
-          "zh": "临界方程",
-          "en": "Critical equations",
-          "summary": "加性特征值、临界值与不变解。",
-          "formula": "H(x,Du)=c(H)",
-          "refs": [
-            "dfiz2016"
-          ],
-          "questions": [
-            "非凸 Hamiltonian 的选择机制如何描述？"
-          ],
-          "links": [
-            "discount-classical",
-            "mather-measures"
-          ]
-        },
-        {
-          "id": "mather-measures",
-          "zh": "Mather 测度",
-          "en": "Mather measures",
-          "summary": "极小化测度、闭测度与变分刻画。",
-          "refs": [
-            "dfiz2016"
-          ],
-          "questions": [
-            "能否用统一框架比较不同非线性 discount 的选择约束？"
-          ],
-          "links": [
-            "discount-nonlinear",
-            "critical-equation"
-          ]
-        },
-        {
-          "id": "aubry-sets",
-          "zh": "Aubry 集与 static classes",
-          "en": "Aubry sets & static classes",
-          "summary": "Aubry 集、静态类和 Peierls barrier。",
-          "refs": [
-            "nyz2026"
-          ],
-          "questions": [
-            "动态结构如何影响收敛速度和选择？"
-          ],
-          "links": [
-            "discount-nonmonotone",
-            "discount-rates"
-          ]
-        }
-      ]
-    },
-    {
       "id": "discount",
-      "zh": "Vanishing Discount",
-      "en": "Vanishing Discount",
-      "desc": "Selection, convergence/divergence, sharp rates, and nonlinear or sign-changing discounts.",
-      "accent": "#d07d50",
+      "label": "Vanishing discount",
+      "description": "Selection, nonlinearity, degeneracy and non-monotonicity",
       "topics": [
-        {
-          "id": "discount-classical",
-          "zh": "经典单调 discount",
-          "en": "Classical discounted HJ",
-          "summary": "研究正折扣方程的极限和所选临界解。",
-          "formula": "\\lambda u_\\lambda+H(x,Du_\\lambda)=c(H),\\quad \\lambda\\downarrow0",
-          "refs": [
-            "dfiz2016"
-          ],
-          "results": [
-            {
-              "name": "经典选择收敛",
-              "text": "在文献给定的凸性和紧性等假设下，折扣解一致收敛到指定的临界解。",
-              "ref": "dfiz2016",
-              "review": "文献索引；条件待逐条提炼"
-            }
-          ],
-          "questions": [
-            "在更弱假设下是否保持收敛？"
-          ],
-          "links": [
-            "critical-equation",
-            "discount-nonmonotone",
-            "discount-rates"
-          ]
-        },
-        {
-          "id": "discount-nonmonotone",
-          "zh": "非单调 discount",
-          "en": "Non-monotone discount",
-          "summary": "研究符号变化的 discount、极限选择与发散现象。",
-          "formula": "G(x,Du_\\lambda,\\lambda u_\\lambda)=c_0",
-          "refs": [
-            "dnyz2024",
-            "nyz2026"
-          ],
-          "questions": [
-            "平均正性条件与选择机制能否进一步弱化？",
-            "哪些静态类可通过适当扰动实现选择？"
-          ],
-          "links": [
-            "discount-classical",
-            "aubry-sets",
-            "discount-nonlinear"
-          ]
-        },
-        {
-          "id": "discount-nonlinear",
-          "zh": "高阶与非线性 discount",
-          "en": "Nonlinear selection",
-          "summary": "研究一阶导数可消失的高阶折扣项，以及不同非线性项选择的临界解。",
-          "formula": "G(x,Du_\\lambda,\\lambda u_\\lambda)=c_0",
-          "refs": [
-            "nz2026"
-          ],
-          "questions": [
-            "不同高阶退化机制是否对应不同收敛速度？"
-          ],
-          "links": [
-            "mather-measures",
-            "discount-nonmonotone"
-          ]
-        },
-        {
-          "id": "discount-rates",
-          "zh": "定量速度与最优性",
-          "en": "Rates & sharpness",
-          "summary": "上界、匹配下界、双井与双曲动力结构。",
-          "refs": [],
-          "questions": [
-            "最一般可期待的速度是什么？",
-            "什么结构使得对数损失出现或消失？"
-          ],
-          "links": [
-            "aubry-sets",
-            "discount-classical"
-          ]
-        },
-        {
-          "id": "discount-negative",
-          "zh": "负向 discount",
-          "en": "Negative discount",
-          "summary": "研究负折扣参数趋零时的非唯一性及选择问题。",
-          "refs": [],
-          "questions": [
-            "解的选取和正则性如何影响负向极限？"
-          ],
-          "links": [
-            "discount-nonmonotone"
-          ]
-        },
-        {
-          "id": "discount-viscosity",
-          "zh": "Discount 与黏性联合消失",
-          "en": "Discount–viscosity limits",
-          "summary": "比较小折扣与小扩散的竞争、联合极限和选择机制。",
-          "refs": [
-            "mnt2026"
-          ],
-          "questions": [
-            "不同扩散尺度下，两个选择机制何时一致？"
-          ],
-          "links": [
-            "discount-classical",
-            "vanishing-viscosity"
-          ]
-        }
+        "Classical selection",
+        "Degenerate discount",
+        "Nonlinear discount",
+        "Non-monotone discount",
+        "Negative discount",
+        "Nonconvex counterexamples"
       ]
     },
     {
       "id": "contact",
-      "zh": "Contact Hamilton–Jacobi",
-      "en": "Contact Hamilton–Jacobi",
-      "desc": "Dependence on the unknown, contact dynamics, stability and long-time behavior.",
-      "accent": "#ae637d",
+      "label": "Contact Hamilton–Jacobi",
+      "description": "Weak KAM, dynamics and oscillations in u",
       "topics": [
-        {
-          "id": "contact-framework",
-          "zh": "Contact HJ 基础",
-          "en": "Contact HJ framework",
-          "summary": "未知函数依赖的 HJ 方程与 contact 变分原理。",
-          "formula": "H(x,u,Du)=0",
-          "refs": [],
-          "questions": [
-            "哪些弱 KAM 结构可以推广到非单调 contact 方程？"
-          ],
-          "links": [
-            "contact-stability",
-            "contact-long-time"
-          ]
-        },
-        {
-          "id": "contact-stability",
-          "zh": "稳定性与 Lyapunov 理论",
-          "en": "Stability & Lyapunov theory",
-          "summary": "平稳黏性解在演化半群下的稳定性与不稳定性。",
-          "refs": [],
-          "questions": [
-            "局部稳定性与长期动力学之间有哪些充分必要条件？"
-          ],
-          "links": [
-            "contact-framework",
-            "regularity"
-          ]
-        },
-        {
-          "id": "contact-long-time",
-          "zh": "Contact 方程长期行为",
-          "en": "Contact long-time behavior",
-          "summary": "长期收敛、极限轨道和吸引结构。",
-          "refs": [],
-          "questions": [
-            "能否以统一半群方法研究稳定性及长期行为？"
-          ],
-          "links": [
-            "contact-framework",
-            "discount-nonmonotone"
-          ]
-        }
+        "Contact weak KAM",
+        "Oscillations in the unknown",
+        "Contact homogenization",
+        "Stability and dynamical criteria"
       ]
     },
     {
-      "id": "homogenization",
-      "zh": "均匀化",
-      "en": "Homogenization",
-      "desc": "Periodic, random, quantitative, boundary and multiscale homogenization.",
-      "accent": "#4779b6",
+      "id": "periodic",
+      "label": "Periodic & quasiperiodic homogenization",
+      "description": "First-order rates and nonconvex obstructions",
       "topics": [
-        {
-          "id": "periodic-homogenization",
-          "zh": "周期均匀化",
-          "en": "Periodic homogenization",
-          "summary": "有效 Hamiltonian、cell problem 与粘性解收敛。",
-          "formula": "u_t^\\varepsilon+H(x/\\varepsilon,Du^\\varepsilon)=0",
-          "refs": [],
-          "questions": [
-            "不同动量凸性下有效方程有何差异？"
-          ],
-          "links": [
-            "homogenization-rates",
-            "neumann-homogenization"
-          ]
-        },
-        {
-          "id": "homogenization-rates",
-          "zh": "收敛速度与 sharpness",
-          "en": "Quantitative rates & sharpness",
-          "summary": "一般定量估计、上下界、依赖初值与 Hamiltonian 结构。",
-          "formula": "\\lVert u^\\varepsilon-u\\rVert_\\infty\\le C\\varepsilon^\\alpha",
-          "refs": [
-            "mn2026"
-          ],
-          "questions": [
-            "在一般凸性假设下，最佳收敛阶如何刻画？"
-          ],
-          "links": [
-            "periodic-homogenization",
-            "fast-switching",
-            "mfg-homogenization"
-          ]
-        },
-        {
-          "id": "neumann-homogenization",
-          "zh": "Neumann / capillary 边界",
-          "en": "Boundary homogenization",
-          "summary": "带边界反射、Neumann 与毛细边界的定量均匀化。",
-          "refs": [
-            "mn2026"
-          ],
-          "questions": [
-            "边界类型改变时，速率是否仍为最佳？"
-          ],
-          "links": [
-            "boundary",
-            "homogenization-rates"
-          ]
-        },
-        {
-          "id": "random-homogenization",
-          "zh": "随机环境",
-          "en": "Stochastic homogenization",
-          "summary": "平稳遍历环境、随机控制和误差估计。",
-          "refs": [],
-          "questions": [
-            "哪些随机结构允许定量速率？"
-          ],
-          "links": [
-            "homogenization-rates"
-          ]
-        },
-        {
-          "id": "multiscale-homogenization",
-          "zh": "多尺度均匀化",
-          "en": "Multiscale homogenization",
-          "summary": "多快变量、迭代均匀化以及定量结果。",
-          "refs": [],
-          "questions": [
-            "新 PDE 方法能否改善某些多尺度估计？"
-          ],
-          "links": [
-            "homogenization-rates",
-            "fast-switching"
-          ]
-        },
-        {
-          "id": "fast-switching",
-          "zh": "Fast switching",
-          "en": "Fast-switching systems",
-          "summary": "快切换耦合系统的均匀化、有效方程和定量问题。",
-          "formula": "u^i_t+H_i(x/\\varepsilon,Du^i)+\\varepsilon^{-1}\\sum_jc_{ij}u^j=0",
-          "refs": [
-            "mt2014"
-          ],
-          "questions": [
-            "Mitake–Tran 框架内是否存在可改进的统一速度？"
-          ],
-          "links": [
-            "weak-coupling",
-            "homogenization-rates"
-          ]
-        }
+        "First-order convex rates",
+        "Nonconvex rates",
+        "Quasiperiodic media"
       ]
     },
     {
-      "id": "mfg",
-      "zh": "Mean Field Games",
-      "en": "Mean Field Games",
-      "desc": "Hamilton–Jacobi / Fokker–Planck couplings, equilibria, long time and quantitative limits.",
-      "accent": "#578457",
+      "id": "viscosity",
+      "label": "Viscosity and competing limits",
+      "description": "Viscous homogenization and selection",
       "topics": [
-        {
-          "id": "mfg-foundations",
-          "zh": "MFG 方程组基础",
-          "en": "MFG PDE systems",
-          "summary": "HJ 方程与群体密度演化方程之间的耦合。",
-          "formula": "\\begin{cases}-u_t+H(x,Du)=F[m],\\\\ m_t-\\mathrm{div}(mD_pH(x,Du))=0.\\end{cases}",
-          "refs": [
-            "ll2007"
-          ],
-          "questions": [
-            "弱正则或退化情形下，合理的解框架是什么？"
-          ],
-          "links": [
-            "mfg-homogenization",
-            "mfg-longtime",
-            "weak-coupling"
-          ]
-        },
-        {
-          "id": "mfg-homogenization",
-          "zh": "MFG 定量均匀化",
-          "en": "MFG homogenization",
-          "summary": "有效系统、耦合项、收敛速度与最优性。",
-          "refs": [
-            "ls2020"
-          ],
-          "questions": [
-            "凸 Hamiltonian 下能否建立最优的统一收敛速率？",
-            "关于密度收敛的估计如何传递到耦合项？"
-          ],
-          "links": [
-            "homogenization-rates",
-            "mfg-foundations"
-          ]
-        },
-        {
-          "id": "mfg-longtime",
-          "zh": "长期行为与 discount",
-          "en": "Long-time & discount",
-          "summary": "遍历 MFG、折扣极限与长期极限之间的关系。",
-          "refs": [],
-          "questions": [
-            "能否比较 HJ 单方程与 MFG 系统的选择机制？"
-          ],
-          "links": [
-            "discount-classical",
-            "mfg-foundations"
-          ]
-        },
-        {
-          "id": "mfg-second-order",
-          "zh": "二阶与主方程",
-          "en": "Second-order MFG & master equation",
-          "summary": "扩散、主方程、公共噪声及正则性。",
-          "refs": [],
-          "questions": [
-            "何种条件支持稳定的定量逼近？"
-          ],
-          "links": [
-            "mfg-foundations"
-          ]
-        }
+        "Viscous homogenization",
+        "Competing perturbations",
+        "Selection counterexamples"
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "Boundary conditions",
+      "description": "Neumann and contact-angle problems",
+      "topics": [
+        "Boundary homogenization",
+        "Boundary regularity"
       ]
     },
     {
       "id": "systems",
-      "zh": "方程组与随机控制",
-      "en": "Systems & Control",
-      "desc": "Weak coupling, switching, representation formulas and degenerate diffusion.",
-      "accent": "#ab8b36",
+      "label": "Coupled HJ systems",
+      "description": "Discount and quantitative homogenization",
       "topics": [
-        {
-          "id": "weak-coupling",
-          "zh": "弱耦合 HJ 方程组",
-          "en": "Weakly coupled HJ systems",
-          "summary": "耦合比较、半群、解选择与长期行为。",
-          "refs": [
-            "dz2017",
-            "mt2014"
-          ],
-          "questions": [
-            "一般退化耦合矩阵下，选择及速率理论能否统一？"
-          ],
-          "links": [
-            "fast-switching",
-            "comparison"
-          ]
-        },
-        {
-          "id": "control-representation",
-          "zh": "随机控制与表示公式",
-          "en": "Stochastic control representations",
-          "summary": "随机切换、动态规划与作用量表示。",
-          "refs": [
-            "dz2017"
-          ],
-          "questions": [
-            "随机控制表示能否改进耦合均匀化的定量估计？"
-          ],
-          "links": [
-            "fast-switching",
-            "weak-coupling"
-          ]
-        },
-        {
-          "id": "vanishing-viscosity",
-          "zh": "Vanishing viscosity",
-          "en": "Vanishing viscosity",
-          "summary": "退化或小扩散扰动下的极限与解选择。",
-          "refs": [
-            "mnt2026"
-          ],
-          "questions": [
-            "Hamiltonian 的解析性和井结构如何影响选择？"
-          ],
-          "links": [
-            "discount-viscosity",
-            "mfg-second-order"
-          ]
-        }
+        "Discounted systems",
+        "Quantitative systems"
       ]
+    },
+    {
+      "id": "random",
+      "label": "Stochastic homogenization",
+      "description": "Positive results and counterexamples",
+      "topics": [
+        "Stochastic homogenization",
+        "Failure of homogenization"
+      ]
+    },
+    {
+      "id": "mfg",
+      "label": "Mean field games & measure-space HJ",
+      "description": "Homogenization, long-time limits and regularity",
+      "topics": [
+        "MFG homogenization",
+        "Weak KAM and asymptotics",
+        "MFG regularity",
+        "Measure-space HJ",
+        "Variational MFG"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "dfiz16",
+      "authors": "A. Davini; A. Fathi; R. Iturriaga; M. Zavidovique",
+      "title": "Convergence of the solutions of the discounted Hamilton–Jacobi equation: convergence of the discounted solutions",
+      "year": 2014,
+      "branch": "discount",
+      "topic": "Classical selection",
+      "arxiv": "1408.6712",
+      "contribution": "Proves full uniform convergence of the discounted family and identifies its selected critical solution through Peierls barriers and Mather measures.",
+      "context": "Before: boundedness and subsequential convergence did not by themselves identify a unique limit.",
+      "scope": "Convex, superlinear Hamiltonians; standard positive linear discount.",
+      "journal": "Invent. Math.",
+      "related": []
+    },
+    {
+      "id": "dz17",
+      "authors": "A. Davini; M. Zavidovique",
+      "title": "Convergence of the solutions of discounted Hamilton–Jacobi systems",
+      "year": 2017,
+      "branch": "systems",
+      "topic": "Discounted systems",
+      "arxiv": "1702.07530",
+      "contribution": "Establishes convergence to a distinguished critical solution for discounted weakly coupled systems using a system-level Mather measure theory and random representation.",
+      "context": "Extends the scalar discounted selection theorem to a coupled setting.",
+      "scope": "Under the coupling and convexity hypotheses of the paper.",
+      "journal": "Adv. Calc. Var.",
+      "related": []
+    },
+    {
+      "id": "zav20",
+      "authors": "M. Zavidovique",
+      "title": "Convergence of solutions for some degenerate discounted Hamilton–Jacobi equations",
+      "year": 2020,
+      "branch": "discount",
+      "topic": "Degenerate discount",
+      "arxiv": "2006.00779",
+      "contribution": "Establishes selection when the spatial discount coefficient α(x) is nonnegative but may vanish, under additional assumptions on α.",
+      "context": "Earlier linear-discount convergence used a strictly positive coefficient.",
+      "scope": "Nonnegative variable coefficient; not arbitrary sign-changing discount.",
+      "journal": "Analysis & PDE",
+      "related": []
+    },
+    {
+      "id": "chen20",
+      "authors": "Q. Chen",
+      "title": "Convergence of solutions of Hamilton-Jacobi equations depending nonlinearly on the unknown function",
+      "year": 2020,
+      "branch": "discount",
+      "topic": "Nonlinear discount",
+      "arxiv": "2009.13677",
+      "contribution": "Shows convergence and gives a Peierls-barrier/Mather-measure description for H(x,Du,λu)=c with nonlinear increasing dependence.",
+      "context": "Moves beyond the affine discount λu while retaining strict monotonicity in the unknown.",
+      "scope": "Strictly increasing dependence on u, convex/coercive momentum.",
+      "journal": "Adv. Calc. Var.",
+      "related": []
+    },
+    {
+      "id": "cfzz23",
+      "authors": "Q. Chen; A. Fathi; M. Zavidovique; J. Zhang",
+      "title": "Convergence of the solutions of the nonlinear discounted Hamilton–Jacobi equation: The central role of Mather measures",
+      "year": 2023,
+      "branch": "discount",
+      "topic": "Nonlinear discount",
+      "arxiv": "2301.10478",
+      "contribution": "Obtains comparison, uniqueness and selection with monotone nonlinear dependence even when strict increase is only required in regions tied to Mather measures.",
+      "context": "Weakens global strict monotonicity conditions found in earlier nonlinear discount results.",
+      "scope": "Uses a Mather-measure-based nondegeneracy assumption.",
+      "journal": "J. Math. Pures Appl.",
+      "related": []
+    },
+    {
+      "id": "ishii22",
+      "authors": "H. Ishii",
+      "title": "The vanishing discount problem for monotone systems of Hamilton-Jacobi equations: a counterexample to the full convergence",
+      "year": 2022,
+      "branch": "systems",
+      "topic": "Discounted systems",
+      "arxiv": "2202.02507",
+      "contribution": "Constructs a monotone weakly coupled system with convex Hamiltonians for which the discounted solutions fail to converge along the whole family.",
+      "context": "Shows scalar convex selection results do not extend to every monotone system merely by convexity.",
+      "scope": "Counterexample, not a general impossibility result for all systems.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "dnyz24",
+      "authors": "A. Davini; P. Ni; J. Yan; M. Zavidovique",
+      "title": "Convergence/divergence phenomena in the vanishing discount limit of Hamilton-Jacobi equations",
+      "year": 2024,
+      "branch": "discount",
+      "topic": "Non-monotone discount",
+      "arxiv": "2411.13780",
+      "contribution": "Under an integral positivity condition on Mather measures, equibounded solution families select one critical solution; other families diverge. Gives coexistence for sign-changing linear coefficients.",
+      "context": "Goes beyond monotone discount, where the comparison structure tends to enforce uniqueness.",
+      "scope": "Integral positivity condition; not arbitrary sign-changing coefficients.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "nyz26",
+      "authors": "P. Ni; J. Yan; M. Zavidovique",
+      "title": "Selection of critical solutions in non-monotone vanishing discount problems",
+      "year": 2026,
+      "branch": "discount",
+      "topic": "Non-monotone discount",
+      "arxiv": "2609.24032",
+      "contribution": "Uses discount coefficients adapted to static classes to select different elementary critical solutions in non-monotone problems.",
+      "context": "Unlike fixed monotone discount, suitable non-monotone families can target different critical solutions.",
+      "scope": "Requires strict subsolutions and a smallness condition on the Mather quotient.",
+      "journal": "",
+      "related": [
+        "dnyz24"
+      ]
+    },
+    {
+      "id": "nz26",
+      "authors": "P. Ni; M. Zavidovique",
+      "title": "Nonlinear selection in vanishing discount problems for Hamilton-Jacobi equations",
+      "year": 2026,
+      "branch": "discount",
+      "topic": "Nonlinear discount",
+      "arxiv": "2611.15399",
+      "contribution": "Proves selection when the Lagrangian has a leading-order expansion of order q>0; includes cubic discount with vanishing first derivative and an example where linear/cubic selections differ.",
+      "context": "Goes beyond selection theorems relying on a nonzero first derivative in the discount variable.",
+      "scope": "Requires the stated leading-order expansion and monotonicity.",
+      "journal": "",
+      "related": [
+        "dfiz16",
+        "cfzz23"
+      ]
+    },
+    {
+      "id": "mnt26",
+      "authors": "H. Mitake; P. Ni; H. V. Tran",
+      "title": "Vanishing discount and viscosity selection problems for mechanical Hamilton–Jacobi equations",
+      "year": 2026,
+      "branch": "viscosity",
+      "topic": "Competing perturbations",
+      "arxiv": "2609.24009",
+      "contribution": "Identifies the selected critical-limit solution when discount and viscosity vanish together for mechanical Hamiltonians; analyzes subcritical/supercritical regimes and quantitative rates.",
+      "context": "Studies interaction of two perturbations rather than either limit alone.",
+      "scope": "Mechanical Hamiltonian and nondegenerate-well assumptions in the principal critical analysis.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "lty26",
+      "authors": "Z. Liu; H. V. Tran; Y. Yu",
+      "title": "Nonexistence of vanishing-viscosity limits for mechanical Hamiltonian ergodic problems",
+      "year": 2026,
+      "branch": "viscosity",
+      "topic": "Selection counterexamples",
+      "arxiv": "2605.10478",
+      "contribution": "Constructs a one-dimensional C³ potential for which normalized viscous ergodic solutions have no full vanishing-viscosity limit.",
+      "context": "Answers the general convergence question negatively without analyticity or stronger structural assumptions.",
+      "scope": "One-dimensional constructed example; does not rule out convergence for more regular potentials.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "mtv24",
+      "authors": "H. Mitake; P. Ni",
+      "title": "Optimal semiconcavity with fractional modulus for Hamilton-Jacobi equations with Neumann boundary conditions",
+      "year": 2026,
+      "branch": "boundary",
+      "topic": "Boundary regularity",
+      "arxiv": "2605.23248",
+      "contribution": "Establishes global fractional-modulus semiconcavity under Neumann boundary conditions via estimates for the Skorokhod problem; proves the exponent is sharp.",
+      "context": "Improves boundary regularity information by identifying an optimal fractional modulus.",
+      "scope": "Boundary geometry and hypotheses in the paper.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "wwy18a",
+      "authors": "K. Wang; L. Wang; J. Yan",
+      "title": "Aubry-Mather and weak KAM theories for contact Hamiltonian systems. Part 1: Strictly increasing case",
+      "year": 2018,
+      "branch": "contact",
+      "topic": "Contact weak KAM",
+      "arxiv": "1801.05612",
+      "contribution": "Shows uniqueness of backward weak KAM solutions and studies maximal forward solutions, Aubry sets, and their contact-geometric representation.",
+      "context": "Develops Aubry–Mather/weak KAM structures for genuinely u-dependent contact Hamiltonians.",
+      "scope": "Tonelli in p and strictly positive ∂uH.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "wwy18b",
+      "authors": "K. Wang; L. Wang; J. Yan",
+      "title": "Weak KAM solutions of Hamilton-Jacobi equations with decreasing dependence on unknown functions",
+      "year": 2018,
+      "branch": "contact",
+      "topic": "Contact weak KAM",
+      "arxiv": "1805.04738",
+      "contribution": "Analyzes weak KAM solutions and evolutionary long-time behavior when H decreases in u.",
+      "context": "Contrasts the increasing contact case, for which backward weak KAM uniqueness gives a different dynamical picture.",
+      "scope": "Specific decreasing-dependence hypotheses.",
+      "journal": "J. Differential Equations",
+      "related": [
+        "wwy18a"
+      ]
+    },
+    {
+      "id": "mty18",
+      "authors": "H. Mitake; H. V. Tran; Y. Yu",
+      "title": "Rate of convergence in periodic homogenization of Hamilton-Jacobi equations: the convex setting",
+      "year": 2018,
+      "branch": "periodic",
+      "topic": "First-order convex rates",
+      "arxiv": "1801.00391",
+      "contribution": "Proves an O(ε) one-sided estimate for convex periodic HJ problems and stronger upper bounds in particular geometric and low-dimensional cases.",
+      "context": "Improves on general O(ε¹ᐟ³) estimates, without obtaining a full O(ε) two-sided bound in all dimensions.",
+      "scope": "General coercive convex H; stronger conclusions need additional assumptions.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "coop21",
+      "authors": "W. Cooperman",
+      "title": "A near-optimal rate of periodic homogenization for convex Hamilton-Jacobi equations",
+      "year": 2021,
+      "branch": "periodic",
+      "topic": "First-order convex rates",
+      "arxiv": "2110.09430",
+      "contribution": "Derives a convergence bound within a logarithmic factor of O(ε) in every dimension through an optimal-control representation and Alexander-type subadditivity estimates.",
+      "context": "Extends near-optimal quantitative control beyond the special-dimensional settings of earlier work.",
+      "scope": "The logarithm remains; later removed by Tran–Yu.",
+      "journal": "Arch. Ration. Mech. Anal.",
+      "related": [
+        "mty18",
+        "ty21"
+      ]
+    },
+    {
+      "id": "ty21",
+      "authors": "H. V. Tran; Y. Yu",
+      "title": "Optimal convergence rate for periodic homogenization of convex Hamilton-Jacobi equations",
+      "year": 2021,
+      "branch": "periodic",
+      "topic": "First-order convex rates",
+      "arxiv": "2112.06896",
+      "contribution": "Proves the sharp uniform O(ε) rate for first-order convex periodic homogenization in any dimension.",
+      "context": "Removes the logarithmic loss in near-optimal estimates and closes the general convex rate problem.",
+      "scope": "Convexity in momentum; not a general nonconvex estimate.",
+      "journal": "",
+      "related": [
+        "coop21",
+        "mty18"
+      ]
+    },
+    {
+      "id": "coop23",
+      "authors": "W. Cooperman",
+      "title": "Slow periodic homogenization for Hamilton-Jacobi equations",
+      "year": 2023,
+      "branch": "periodic",
+      "topic": "Nonconvex rates",
+      "arxiv": "2302.01879",
+      "contribution": "Constructs coercive nonconvex periodic Hamiltonians with a homogenization error bounded below at order ε¹ᐟ², ruling out a universal O(ε) rate without convexity.",
+      "context": "The convex periodic theory has the sharp O(ε) estimate, while the general coercive nonconvex setting has a weaker universal rate.",
+      "scope": "A lower-bound construction; it does not establish an O(ε¹ᐟ²) upper bound for all nonconvex H.",
+      "journal": "Comm. Partial Differential Equations",
+      "related": [
+        "ty21"
+      ]
+    },
+    {
+      "id": "htu24",
+      "authors": "B. Hu; S. N. T. Tu; J. Zhang",
+      "title": "Polynomial convergence rate for quasi-periodic homogenization of Hamilton-Jacobi equations and application to ergodic estimates",
+      "year": 2024,
+      "branch": "periodic",
+      "topic": "Quasiperiodic media",
+      "arxiv": "2405.11516",
+      "contribution": "Obtains polynomial convergence estimates for quasiperiodic potentials using Diophantine ergodic estimates and regularity of the effective Hamiltonian.",
+      "context": "Quantifies homogenization beyond the periodic setting where cell problems and O(ε) results are available.",
+      "scope": "Specific quasiperiodic/Diophantine structure, largely one-dimensional formulation.",
+      "journal": "Comm. Partial Differential Equations",
+      "related": []
+    },
+    {
+      "id": "mnt25",
+      "authors": "H. Mitake; P. Ni; H. V. Tran",
+      "title": "Quantitative homogenization of convex Hamilton-Jacobi equations with u/ε-periodic Hamiltonians",
+      "year": 2025,
+      "branch": "contact",
+      "topic": "Oscillations in the unknown",
+      "arxiv": "2507.00663",
+      "contribution": "Obtains an optimal rate for convex HJ equations with periodic oscillations in the unknown u/ε using an implicit variational principle; also derives Hölder estimates under extra assumptions.",
+      "context": "Adds fast dependence on the solution value, absent from standard H(x/ε,Du) homogenization.",
+      "scope": "Convexity and the paper’s structural conditions.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "mn25",
+      "authors": "H. Mitake; P. Ni",
+      "title": "Quantitative homogenization of convex Hamilton-Jacobi equations with Neumann type boundary conditions",
+      "year": 2025,
+      "branch": "boundary",
+      "topic": "Boundary homogenization",
+      "arxiv": "2501.12013",
+      "contribution": "Proves optimal O(ε) homogenization for convex HJ on periodically perforated domains with oblique Neumann or contact-angle boundary conditions using reflected-control representations.",
+      "context": "Transfers the first-order convex optimal rate to oscillating boundary geometry and boundary conditions.",
+      "scope": "Periodicity, convexity and structural boundary assumptions.",
+      "journal": "Calc. Var. PDE",
+      "related": [
+        "ty21"
+      ]
+    },
+    {
+      "id": "mn24",
+      "authors": "H. Mitake; P. Ni",
+      "title": "Rate of convergence for homogenization of nonlinear weakly coupled Hamilton-Jacobi systems",
+      "year": 2024,
+      "branch": "systems",
+      "topic": "Quantitative systems",
+      "arxiv": "2412.06428",
+      "contribution": "Proves a sharp O(√ε) homogenization rate for a class of convex nonlinearly coupled HJ systems.",
+      "context": "In contrast to the scalar convex O(ε) rate, coupling changes the rate behavior under the studied hypotheses.",
+      "scope": "Nonlinear weak coupling of the stated form.",
+      "journal": "J. Differential Equations",
+      "related": [
+        "ty21"
+      ]
+    },
+    {
+      "id": "qsty24",
+      "authors": "J. Qian; T. Sprekeler; H. V. Tran; Y. Yu",
+      "title": "Optimal rate of convergence in periodic homogenization of viscous Hamilton-Jacobi equations",
+      "year": 2024,
+      "branch": "viscosity",
+      "topic": "Viscous homogenization",
+      "arxiv": "2402.03091",
+      "contribution": "Establishes sharp O(√ε) convergence for the parabolic scaling with εΔu and periodic coefficients.",
+      "context": "Identifies a different optimal rate from the first-order convex O(ε) theorem.",
+      "scope": "Viscosity at the same microscopic scale and assumptions of the paper.",
+      "journal": "Multiscale Model. Simul.",
+      "related": []
+    },
+    {
+      "id": "lty26rate",
+      "authors": "Z. Liu; H. V. Tran; Y. Yu",
+      "title": "Sharp global and almost everywhere convergence rates for periodic homogenization of viscous quadratic Hamilton-Jacobi equations",
+      "year": 2026,
+      "branch": "viscosity",
+      "topic": "Viscous homogenization",
+      "arxiv": "2604.19948",
+      "contribution": "For a quadratic H and εΔu/2, proves the sharp global O(ε|log ε|) bound and pointwise O(ε) at almost every suitable point.",
+      "context": "Improves the general O(√ε) viscous estimate for a special quadratic structure.",
+      "scope": "Quadratic kinetic energy and specified potential regularity.",
+      "journal": "",
+      "related": [
+        "qsty24"
+      ]
+    },
+    {
+      "id": "qin26",
+      "authors": "K. Qin",
+      "title": "Convergence rates in the periodic homogenization of vanishing-viscous Hamilton-Jacobi equations",
+      "year": 2026,
+      "branch": "viscosity",
+      "topic": "Viscous homogenization",
+      "arxiv": "2609.30693",
+      "contribution": "Extends an O(ε|log ε|) estimate beyond the quadratic kinetic Hamiltonian to smooth H with positive definite momentum Hessian; uses corrector-based PDE comparison.",
+      "context": "Generalizes the class of Hamiltonians covered by the quadratic-rate result, without a new matching lower-bound mechanism.",
+      "scope": "Smooth Hamiltonians with Hpp positive definite, not arbitrary convex H.",
+      "journal": "",
+      "related": [
+        "lty26rate"
+      ]
+    },
+    {
+      "id": "ltz26",
+      "authors": "G. Liu; S. N. T. Tu; J. Zhang",
+      "title": "Quantitative homogenization for static contact Hamilton-Jacobi equations",
+      "year": 2026,
+      "branch": "contact",
+      "topic": "Contact homogenization",
+      "arxiv": "2604.02693",
+      "contribution": "Provides Mather-measure conditions giving O(ε) convergence of all solutions for certain stationary contact HJ equations, including a viscous variant.",
+      "context": "Addresses non-strictly monotone dependence in stationary contact homogenization, rather than only spatially oscillating first-order HJ.",
+      "scope": "Requires the paper’s selection criteria on Mather measures.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "dehz26",
+      "authors": "Z. Ding; I. Ekren; Y. Han; A. Zitridis",
+      "title": "Quantitative homogenization of convex Hamilton-Jacobi equations in the Wasserstein space",
+      "year": 2026,
+      "branch": "mfg",
+      "topic": "Measure-space HJ",
+      "arxiv": "2606.22103",
+      "contribution": "Extends quantitative periodic homogenization to HJ equations on probability measures: O(√ε) in a multiscale setting and sharp O(ε) for fast-variable/momentum dependence.",
+      "context": "Moves finite-dimensional HJ rate theory to the Wasserstein space, with mean-field-control applications.",
+      "scope": "Convexity and the structural assumptions of the two regimes.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "ac15",
+      "authors": "S. Armstrong; P. Cardaliaguet",
+      "title": "Stochastic homogenization of quasilinear Hamilton-Jacobi equations and geometric motions",
+      "year": 2015,
+      "branch": "random",
+      "topic": "Stochastic homogenization",
+      "arxiv": "1504.02045",
+      "contribution": "Establishes stochastic homogenization and algebraic error estimates for quasilinear HJ and geometric-front equations under quantitative randomness assumptions.",
+      "context": "Provides a quantitative stochastic theory for geometric and some viscous nonconvex equations.",
+      "scope": "Random-environment structure; published in 2018.",
+      "journal": "J. Eur. Math. Soc.",
+      "related": []
+    },
+    {
+      "id": "ziliotto15",
+      "authors": "B. Ziliotto",
+      "title": "Stochastic homogenization of nonconvex Hamilton-Jacobi equations: a counterexample",
+      "year": 2015,
+      "branch": "random",
+      "topic": "Failure of homogenization",
+      "arxiv": "1512.06375",
+      "contribution": "Constructs a stationary-ergodic nonconvex HJ problem for which stochastic homogenization fails.",
+      "context": "Shows coercivity and stationarity without convexity are insufficient for universal homogenization.",
+      "scope": "Counterexample in a particular random environment.",
+      "journal": "Comm. Pure Appl. Math.",
+      "related": []
+    },
+    {
+      "id": "fs16",
+      "authors": "W. Feldman; P. E. Souganidis",
+      "title": "Homogenization and non-homogenization of certain non-convex Hamilton-Jacobi equations",
+      "year": 2016,
+      "branch": "random",
+      "topic": "Failure of homogenization",
+      "arxiv": "1609.09410",
+      "contribution": "Derives both homogenization and failure mechanisms for classes of nonconvex random HJ; strict saddle points can produce failure.",
+      "context": "Relates non-homogenization to a local geometric condition, beyond the initial example of Ziliotto.",
+      "scope": "Class-specific results, not a complete classification.",
+      "journal": "",
+      "related": [
+        "ziliotto15"
+      ]
+    },
+    {
+      "id": "cm19",
+      "authors": "P. Cardaliaguet; M. Masoero",
+      "title": "Weak KAM theory for potential MFG",
+      "year": 2019,
+      "branch": "mfg",
+      "topic": "Weak KAM and asymptotics",
+      "arxiv": "1904.13287",
+      "contribution": "Builds a measure-space weak KAM framework for potential MFG and proves a large-time limit for an associated control value function.",
+      "context": "Transfers weak KAM structures from single-agent HJ to potential mean-field games.",
+      "scope": "Potential/variational MFG structure.",
+      "journal": "J. Differential Equations",
+      "related": []
+    },
+    {
+      "id": "ls19",
+      "authors": "P.-L. Lions; P. E. Souganidis",
+      "title": "Homogenization of the backward-forward mean-field games systems in periodic environments",
+      "year": 2019,
+      "branch": "mfg",
+      "topic": "MFG homogenization",
+      "arxiv": "1909.01250",
+      "contribution": "Proves periodic/small-viscosity homogenization for MFG systems with smoothing coupling and, under stronger preparation, local coupling; shows the effective limit need not itself be MFG-type.",
+      "context": "Addresses coupled backward-forward systems rather than only their HJ component.",
+      "scope": "Separated Hamiltonians; local-coupling theorem needs well-prepared data.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "cp17",
+      "authors": "P. Cardaliaguet; A. Porretta",
+      "title": "Long time behavior of the master equation in mean-field game theory",
+      "year": 2017,
+      "branch": "mfg",
+      "topic": "Weak KAM and asymptotics",
+      "arxiv": "1709.04215",
+      "contribution": "Proves ergodic master-equation limits for large horizons and vanishing discount, using exponential convergence estimates for MFG systems.",
+      "context": "Lifts long-time/discount selection questions from MFG systems to the master equation on measures.",
+      "scope": "Regularity/monotonicity framework of the paper.",
+      "journal": "Analysis & PDE",
+      "related": []
+    },
+    {
+      "id": "cirant21",
+      "authors": "M. Cirant; A. Porretta",
+      "title": "Long time behaviour and turnpike solutions in mildly non-monotone mean field games",
+      "year": 2021,
+      "branch": "mfg",
+      "topic": "Weak KAM and asymptotics",
+      "arxiv": "2101.09965",
+      "contribution": "Proves well-posedness, turnpike behavior, vanishing discount and ergodic convergence for sufficiently mildly non-monotone local couplings.",
+      "context": "Relaxes classical monotone-coupling assumptions, exploiting the regularizing effect of diffusion.",
+      "scope": "Non-monotonicity must remain quantitatively small relative to noise/estimates.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "cmp23",
+      "authors": "P. Cardaliaguet; S. Munoz; A. Porretta",
+      "title": "Free boundary regularity and support propagation in mean field games and optimal transport",
+      "year": 2023,
+      "branch": "mfg",
+      "topic": "MFG regularity",
+      "arxiv": "2308.00314",
+      "contribution": "Shows finite or infinite support-propagation regimes and C¹,¹ free-boundary regularity for one-dimensional first-order MFG with local couplings.",
+      "context": "Replaces a purely qualitative MFG description by sharp support and free-boundary behavior.",
+      "scope": "One spatial dimension and coupling-specific conditions.",
+      "journal": "",
+      "related": []
+    },
+    {
+      "id": "bk23",
+      "authors": "M. Bardi; H. Kouhkouh",
+      "title": "Long-time behaviour of deterministic Mean Field Games with non-monotone interactions",
+      "year": 2023,
+      "branch": "mfg",
+      "topic": "Weak KAM and asymptotics",
+      "arxiv": "2304.09509",
+      "contribution": "Obtains long-time convergence to ergodic MFG for deterministic non-monotone interactions sharing a common minimizer set.",
+      "context": "Provides a non-monotone mechanism outside the standard Lasry–Lions monotonicity condition.",
+      "scope": "Non-monotonicity is restricted by common minimizers of the costs.",
+      "journal": "SIAM J. Math. Anal.",
+      "related": []
+    },
+    {
+      "id": "ziliotto18",
+      "authors": "B. Ziliotto",
+      "title": "Convergence of the solutions of the discounted Hamilton-Jacobi equation: a counterexample",
+      "year": 2018,
+      "branch": "discount",
+      "topic": "Nonconvex counterexamples",
+      "arxiv": "1801.06008",
+      "journal": "J. Math. Pures Appl.",
+      "related": [
+        "dfiz16"
+      ],
+      "context": "DFIZ proved whole-family convergence when the Hamiltonian is convex in momentum.",
+      "contribution": "Constructs a one-dimensional continuous coercive nonconvex Hamiltonian whose normalized discounted solutions do not converge as the discount vanishes.",
+      "scope": "A nonconvex counterexample; it does not contradict the convex selection theorem."
+    },
+    {
+      "id": "daviniwang20",
+      "authors": "A. Davini; L. Wang",
+      "title": "On the vanishing discount problem from the negative direction",
+      "year": 2020,
+      "branch": "discount",
+      "topic": "Negative discount",
+      "arxiv": "2007.12458",
+      "journal": "",
+      "related": [
+        "dfiz16"
+      ],
+      "context": "The standard positive-discount problem has a unique solution and a selected limit for convex coercive Hamiltonians.",
+      "contribution": "Studies minimal solutions for negative discount and proves convergence to the classical selected limit when constants are critical subsolutions.",
+      "scope": "Tonelli Hamiltonian and a structural assumption on constant critical subsolutions; minimal-solution branch."
+    },
+    {
+      "id": "niyan26",
+      "authors": "P. Ni; J. Yan",
+      "title": "A PDE formulation of Lyapunov stability for contact-type Hamilton-Jacobi equations",
+      "year": 2026,
+      "branch": "contact",
+      "topic": "Stability and dynamical criteria",
+      "arxiv": "2604.24329",
+      "journal": "",
+      "related": [
+        "wwy18a"
+      ],
+      "context": "Earlier contact-HJ stability descriptions typically used C³ Tonelli Hamiltonians and conditions involving Mather measures.",
+      "contribution": "Develops PDE-type sufficient criteria for stability and instability of stationary viscosity solutions using critical values and viscosity subsolutions, under continuous convex coercive Hamiltonians.",
+      "scope": "Specific sufficient criteria; not a universal equivalence for every stability problem."
+    },
+    {
+      "id": "siconolfi25",
+      "authors": "A. Siconolfi",
+      "title": "Differential and Variational Approach to First Order Mean Field Games in a Generalized Form",
+      "year": 2025,
+      "branch": "mfg",
+      "topic": "Variational MFG",
+      "arxiv": "2512.00587",
+      "journal": "",
+      "related": [],
+      "context": "First-order MFG may be represented by an HJ equation coupled with a continuity equation, or variationally via measures on trajectories.",
+      "contribution": "Establishes fixed-point existence for a general trajectory-measure formulation and connects it to a continuity equation when H is differentiable in momentum, identifying the velocity field on regions visited by optimal trajectories.",
+      "scope": "The differential identification requires momentum differentiability; it does not assert a classical velocity field everywhere without further assumptions."
     }
   ]
 }
