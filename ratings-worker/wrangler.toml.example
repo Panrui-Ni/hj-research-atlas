@@ -1,0 +1,16 @@
+name = "hj-atlas-ratings"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://YOUR_GITHUB_USERNAME.github.io"
+ALLOWED_PAPERS = "cil1992,dfiz2016,dnyz2024,nyz2026,nz2026,mt2014,mn2026,dz2017,mnt2026,ll2007,ls2020"
+MAX_DAILY_WRITES = "60"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hj-atlas-ratings"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# Secrets must be set using `npx wrangler secret put`.
+# NEVER put RATING_SECRET or TURNSTILE_SECRET here or in config.js.

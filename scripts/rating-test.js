@@ -1,0 +1,18 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const source=fs.readFileSync(path.resolve(__dirname,'../assets/ratings.js'),'utf8');
+let handlerCount=0;
+const sandbox={window:{HJ_ATLAS_CONFIG:{ratings:{apiBase:'',turnstileSiteKey:''}}},document:{addEventListener:()=>{handlerCount++;}},console};
+vm.createContext(sandbox);
+vm.runInContext(source,sandbox);
+const html=sandbox.window.HJRating.renderPanel('dfiz2016');
+assert.equal(sandbox.window.HJRating.dimensions.length,5);
+assert.equal(sandbox.window.HJRating.levels.length,4);
+assert.ok(html.includes('data-rating-submit="dfiz2016"'));
+assert.ok(html.includes('不评价 / 不确定'));
+assert.ok(html.includes('仅在此浏览器保存草稿'));
+assert.equal(handlerCount,1);
+console.log('OK: anonymous rating UI renders in local draft mode');

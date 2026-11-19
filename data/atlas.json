@@ -1,0 +1,641 @@
+{
+  "project": {
+    "name": "Hamilton–Jacobi Research Atlas",
+    "shortName": "HJ Atlas",
+    "tagline": "A living, community-curated map of Hamilton–Jacobi equations and neighboring fields.",
+    "updated": "2026-11-19",
+    "notice": "This is a community-oriented prototype. Entries and open-question prompts are examples; any mathematical assertion must be checked against the cited original paper."
+  },
+  "references": [
+    {
+      "id": "cil1992",
+      "authors": "M. G. Crandall, H. Ishii, P.-L. Lions",
+      "title": "User’s guide to viscosity solutions of second order partial differential equations",
+      "year": 1992,
+      "venue": "Bull. Amer. Math. Soc.",
+      "url": "https://doi.org/10.1090/S0273-0979-1992-00266-5",
+      "type": "published"
+    },
+    {
+      "id": "dfiz2016",
+      "authors": "A. Davini, A. Fathi, R. Iturriaga, M. Zavidovique",
+      "title": "Convergence of the solutions of the discounted Hamilton–Jacobi equation",
+      "year": 2016,
+      "venue": "Invent. Math.",
+      "url": "https://arxiv.org/abs/1408.6712",
+      "type": "published"
+    },
+    {
+      "id": "dnyz2024",
+      "authors": "A. Davini, P. Ni, J. Yan, M. Zavidovique",
+      "title": "Convergence/divergence phenomena in the vanishing discount limit of Hamilton–Jacobi equations",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2411.13780",
+      "type": "preprint"
+    },
+    {
+      "id": "nyz2026",
+      "authors": "P. Ni, J. Yan, M. Zavidovique",
+      "title": "Selection of critical solutions in non-monotone vanishing discount problems",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2609.24032",
+      "type": "preprint"
+    },
+    {
+      "id": "nz2026",
+      "authors": "P. Ni, M. Zavidovique",
+      "title": "Nonlinear selection in vanishing discount problems for Hamilton–Jacobi equations",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2611.15399",
+      "type": "preprint"
+    },
+    {
+      "id": "mt2014",
+      "authors": "H. Mitake, H. V. Tran",
+      "title": "Homogenization of weakly coupled systems of Hamilton–Jacobi equations with fast switching rates",
+      "year": 2014,
+      "venue": "Arch. Ration. Mech. Anal.",
+      "url": "https://arxiv.org/abs/1204.2748",
+      "type": "published"
+    },
+    {
+      "id": "mn2026",
+      "authors": "H. Mitake, P. Ni",
+      "title": "Quantitative homogenization of convex Hamilton–Jacobi equations with Neumann type boundary conditions",
+      "year": 2026,
+      "venue": "Calc. Var. Partial Differential Equations",
+      "url": "https://doi.org/10.1007/s00526-026-03320-6",
+      "type": "published"
+    },
+    {
+      "id": "dz2017",
+      "authors": "A. Davini, M. Zavidovique",
+      "title": "Convergence of the solutions of discounted Hamilton–Jacobi systems",
+      "year": 2017,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/1702.07530",
+      "type": "preprint"
+    },
+    {
+      "id": "mnt2026",
+      "authors": "H. Mitake, P. Ni, H. V. Tran",
+      "title": "Vanishing discount and viscosity selection problems for mechanical Hamilton–Jacobi equations",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2609.24009",
+      "type": "preprint"
+    },
+    {
+      "id": "ll2007",
+      "authors": "J.-M. Lasry, P.-L. Lions",
+      "title": "Mean field games",
+      "year": 2007,
+      "venue": "Japan. J. Math.",
+      "url": "https://www.ms.u-tokyo.ac.jp/~toshi/jjm/JJM_HP/contents/abstract/2-1/JJM0657-AB.pdf",
+      "type": "published"
+    },
+    {
+      "id": "ls2020",
+      "authors": "P.-L. Lions, P. E. Souganidis",
+      "title": "Homogenization of the backward-forward mean-field games systems in periodic environments",
+      "year": 2020,
+      "venue": "Rend. Lincei Mat. Appl.",
+      "url": "https://arxiv.org/abs/1909.01250",
+      "type": "published"
+    }
+  ],
+  "branches": [
+    {
+      "id": "foundations",
+      "zh": "基础理论",
+      "en": "Fundamental Theory",
+      "desc": "Viscosity solutions, comparison, regularity and boundary problems.",
+      "accent": "#28777a",
+      "topics": [
+        {
+          "id": "viscosity",
+          "zh": "黏性解",
+          "en": "Viscosity solutions",
+          "summary": "弱解概念、测试函数、稳定性与 Perron 方法。",
+          "formula": "F(x,u,Du,D^2u)=0",
+          "refs": [
+            "cil1992"
+          ],
+          "questions": [
+            "哪些比较原理可推广到非标准增长或非局部算子？"
+          ],
+          "links": [
+            "comparison",
+            "boundary"
+          ]
+        },
+        {
+          "id": "comparison",
+          "zh": "比较原理与唯一性",
+          "en": "Comparison & uniqueness",
+          "summary": "结构条件、doubling variables 和边界比较。",
+          "refs": [
+            "cil1992"
+          ],
+          "questions": [
+            "退化或耦合问题的最弱比较条件是什么？"
+          ],
+          "links": [
+            "viscosity",
+            "weak-coupling"
+          ]
+        },
+        {
+          "id": "regularity",
+          "zh": "正则性",
+          "en": "Regularity",
+          "summary": "Lipschitz、半凹性、半凸性与更高正则性。",
+          "refs": [],
+          "questions": [
+            "哪些几何条件决定全局半凹性？"
+          ],
+          "links": [
+            "boundary",
+            "contact-stability"
+          ]
+        },
+        {
+          "id": "boundary",
+          "zh": "边界条件",
+          "en": "Boundary conditions",
+          "summary": "Dirichlet、Neumann、状态约束及毛细边界条件。",
+          "refs": [
+            "mn2026"
+          ],
+          "questions": [
+            "边界几何及斜导数条件如何影响定量估计？"
+          ],
+          "links": [
+            "neumann-homogenization",
+            "viscosity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weak-kam",
+      "zh": "弱 KAM 与 Aubry–Mather",
+      "en": "Weak KAM & Aubry–Mather",
+      "desc": "Critical solutions, calibrated curves, minimizing measures and dynamical structures.",
+      "accent": "#8b6caf",
+      "topics": [
+        {
+          "id": "critical-equation",
+          "zh": "临界方程",
+          "en": "Critical equations",
+          "summary": "加性特征值、临界值与不变解。",
+          "formula": "H(x,Du)=c(H)",
+          "refs": [
+            "dfiz2016"
+          ],
+          "questions": [
+            "非凸 Hamiltonian 的选择机制如何描述？"
+          ],
+          "links": [
+            "discount-classical",
+            "mather-measures"
+          ]
+        },
+        {
+          "id": "mather-measures",
+          "zh": "Mather 测度",
+          "en": "Mather measures",
+          "summary": "极小化测度、闭测度与变分刻画。",
+          "refs": [
+            "dfiz2016"
+          ],
+          "questions": [
+            "能否用统一框架比较不同非线性 discount 的选择约束？"
+          ],
+          "links": [
+            "discount-nonlinear",
+            "critical-equation"
+          ]
+        },
+        {
+          "id": "aubry-sets",
+          "zh": "Aubry 集与 static classes",
+          "en": "Aubry sets & static classes",
+          "summary": "Aubry 集、静态类和 Peierls barrier。",
+          "refs": [
+            "nyz2026"
+          ],
+          "questions": [
+            "动态结构如何影响收敛速度和选择？"
+          ],
+          "links": [
+            "discount-nonmonotone",
+            "discount-rates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discount",
+      "zh": "Vanishing Discount",
+      "en": "Vanishing Discount",
+      "desc": "Selection, convergence/divergence, sharp rates, and nonlinear or sign-changing discounts.",
+      "accent": "#d07d50",
+      "topics": [
+        {
+          "id": "discount-classical",
+          "zh": "经典单调 discount",
+          "en": "Classical discounted HJ",
+          "summary": "研究正折扣方程的极限和所选临界解。",
+          "formula": "\\lambda u_\\lambda+H(x,Du_\\lambda)=c(H),\\quad \\lambda\\downarrow0",
+          "refs": [
+            "dfiz2016"
+          ],
+          "results": [
+            {
+              "name": "经典选择收敛",
+              "text": "在文献给定的凸性和紧性等假设下，折扣解一致收敛到指定的临界解。",
+              "ref": "dfiz2016",
+              "review": "文献索引；条件待逐条提炼"
+            }
+          ],
+          "questions": [
+            "在更弱假设下是否保持收敛？"
+          ],
+          "links": [
+            "critical-equation",
+            "discount-nonmonotone",
+            "discount-rates"
+          ]
+        },
+        {
+          "id": "discount-nonmonotone",
+          "zh": "非单调 discount",
+          "en": "Non-monotone discount",
+          "summary": "研究符号变化的 discount、极限选择与发散现象。",
+          "formula": "G(x,Du_\\lambda,\\lambda u_\\lambda)=c_0",
+          "refs": [
+            "dnyz2024",
+            "nyz2026"
+          ],
+          "questions": [
+            "平均正性条件与选择机制能否进一步弱化？",
+            "哪些静态类可通过适当扰动实现选择？"
+          ],
+          "links": [
+            "discount-classical",
+            "aubry-sets",
+            "discount-nonlinear"
+          ]
+        },
+        {
+          "id": "discount-nonlinear",
+          "zh": "高阶与非线性 discount",
+          "en": "Nonlinear selection",
+          "summary": "研究一阶导数可消失的高阶折扣项，以及不同非线性项选择的临界解。",
+          "formula": "G(x,Du_\\lambda,\\lambda u_\\lambda)=c_0",
+          "refs": [
+            "nz2026"
+          ],
+          "questions": [
+            "不同高阶退化机制是否对应不同收敛速度？"
+          ],
+          "links": [
+            "mather-measures",
+            "discount-nonmonotone"
+          ]
+        },
+        {
+          "id": "discount-rates",
+          "zh": "定量速度与最优性",
+          "en": "Rates & sharpness",
+          "summary": "上界、匹配下界、双井与双曲动力结构。",
+          "refs": [],
+          "questions": [
+            "最一般可期待的速度是什么？",
+            "什么结构使得对数损失出现或消失？"
+          ],
+          "links": [
+            "aubry-sets",
+            "discount-classical"
+          ]
+        },
+        {
+          "id": "discount-negative",
+          "zh": "负向 discount",
+          "en": "Negative discount",
+          "summary": "研究负折扣参数趋零时的非唯一性及选择问题。",
+          "refs": [],
+          "questions": [
+            "解的选取和正则性如何影响负向极限？"
+          ],
+          "links": [
+            "discount-nonmonotone"
+          ]
+        },
+        {
+          "id": "discount-viscosity",
+          "zh": "Discount 与黏性联合消失",
+          "en": "Discount–viscosity limits",
+          "summary": "比较小折扣与小扩散的竞争、联合极限和选择机制。",
+          "refs": [
+            "mnt2026"
+          ],
+          "questions": [
+            "不同扩散尺度下，两个选择机制何时一致？"
+          ],
+          "links": [
+            "discount-classical",
+            "vanishing-viscosity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "zh": "Contact Hamilton–Jacobi",
+      "en": "Contact Hamilton–Jacobi",
+      "desc": "Dependence on the unknown, contact dynamics, stability and long-time behavior.",
+      "accent": "#ae637d",
+      "topics": [
+        {
+          "id": "contact-framework",
+          "zh": "Contact HJ 基础",
+          "en": "Contact HJ framework",
+          "summary": "未知函数依赖的 HJ 方程与 contact 变分原理。",
+          "formula": "H(x,u,Du)=0",
+          "refs": [],
+          "questions": [
+            "哪些弱 KAM 结构可以推广到非单调 contact 方程？"
+          ],
+          "links": [
+            "contact-stability",
+            "contact-long-time"
+          ]
+        },
+        {
+          "id": "contact-stability",
+          "zh": "稳定性与 Lyapunov 理论",
+          "en": "Stability & Lyapunov theory",
+          "summary": "平稳黏性解在演化半群下的稳定性与不稳定性。",
+          "refs": [],
+          "questions": [
+            "局部稳定性与长期动力学之间有哪些充分必要条件？"
+          ],
+          "links": [
+            "contact-framework",
+            "regularity"
+          ]
+        },
+        {
+          "id": "contact-long-time",
+          "zh": "Contact 方程长期行为",
+          "en": "Contact long-time behavior",
+          "summary": "长期收敛、极限轨道和吸引结构。",
+          "refs": [],
+          "questions": [
+            "能否以统一半群方法研究稳定性及长期行为？"
+          ],
+          "links": [
+            "contact-framework",
+            "discount-nonmonotone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "homogenization",
+      "zh": "均匀化",
+      "en": "Homogenization",
+      "desc": "Periodic, random, quantitative, boundary and multiscale homogenization.",
+      "accent": "#4779b6",
+      "topics": [
+        {
+          "id": "periodic-homogenization",
+          "zh": "周期均匀化",
+          "en": "Periodic homogenization",
+          "summary": "有效 Hamiltonian、cell problem 与粘性解收敛。",
+          "formula": "u_t^\\varepsilon+H(x/\\varepsilon,Du^\\varepsilon)=0",
+          "refs": [],
+          "questions": [
+            "不同动量凸性下有效方程有何差异？"
+          ],
+          "links": [
+            "homogenization-rates",
+            "neumann-homogenization"
+          ]
+        },
+        {
+          "id": "homogenization-rates",
+          "zh": "收敛速度与 sharpness",
+          "en": "Quantitative rates & sharpness",
+          "summary": "一般定量估计、上下界、依赖初值与 Hamiltonian 结构。",
+          "formula": "\\lVert u^\\varepsilon-u\\rVert_\\infty\\le C\\varepsilon^\\alpha",
+          "refs": [
+            "mn2026"
+          ],
+          "questions": [
+            "在一般凸性假设下，最佳收敛阶如何刻画？"
+          ],
+          "links": [
+            "periodic-homogenization",
+            "fast-switching",
+            "mfg-homogenization"
+          ]
+        },
+        {
+          "id": "neumann-homogenization",
+          "zh": "Neumann / capillary 边界",
+          "en": "Boundary homogenization",
+          "summary": "带边界反射、Neumann 与毛细边界的定量均匀化。",
+          "refs": [
+            "mn2026"
+          ],
+          "questions": [
+            "边界类型改变时，速率是否仍为最佳？"
+          ],
+          "links": [
+            "boundary",
+            "homogenization-rates"
+          ]
+        },
+        {
+          "id": "random-homogenization",
+          "zh": "随机环境",
+          "en": "Stochastic homogenization",
+          "summary": "平稳遍历环境、随机控制和误差估计。",
+          "refs": [],
+          "questions": [
+            "哪些随机结构允许定量速率？"
+          ],
+          "links": [
+            "homogenization-rates"
+          ]
+        },
+        {
+          "id": "multiscale-homogenization",
+          "zh": "多尺度均匀化",
+          "en": "Multiscale homogenization",
+          "summary": "多快变量、迭代均匀化以及定量结果。",
+          "refs": [],
+          "questions": [
+            "新 PDE 方法能否改善某些多尺度估计？"
+          ],
+          "links": [
+            "homogenization-rates",
+            "fast-switching"
+          ]
+        },
+        {
+          "id": "fast-switching",
+          "zh": "Fast switching",
+          "en": "Fast-switching systems",
+          "summary": "快切换耦合系统的均匀化、有效方程和定量问题。",
+          "formula": "u^i_t+H_i(x/\\varepsilon,Du^i)+\\varepsilon^{-1}\\sum_jc_{ij}u^j=0",
+          "refs": [
+            "mt2014"
+          ],
+          "questions": [
+            "Mitake–Tran 框架内是否存在可改进的统一速度？"
+          ],
+          "links": [
+            "weak-coupling",
+            "homogenization-rates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mfg",
+      "zh": "Mean Field Games",
+      "en": "Mean Field Games",
+      "desc": "Hamilton–Jacobi / Fokker–Planck couplings, equilibria, long time and quantitative limits.",
+      "accent": "#578457",
+      "topics": [
+        {
+          "id": "mfg-foundations",
+          "zh": "MFG 方程组基础",
+          "en": "MFG PDE systems",
+          "summary": "HJ 方程与群体密度演化方程之间的耦合。",
+          "formula": "\\begin{cases}-u_t+H(x,Du)=F[m],\\\\ m_t-\\mathrm{div}(mD_pH(x,Du))=0.\\end{cases}",
+          "refs": [
+            "ll2007"
+          ],
+          "questions": [
+            "弱正则或退化情形下，合理的解框架是什么？"
+          ],
+          "links": [
+            "mfg-homogenization",
+            "mfg-longtime",
+            "weak-coupling"
+          ]
+        },
+        {
+          "id": "mfg-homogenization",
+          "zh": "MFG 定量均匀化",
+          "en": "MFG homogenization",
+          "summary": "有效系统、耦合项、收敛速度与最优性。",
+          "refs": [
+            "ls2020"
+          ],
+          "questions": [
+            "凸 Hamiltonian 下能否建立最优的统一收敛速率？",
+            "关于密度收敛的估计如何传递到耦合项？"
+          ],
+          "links": [
+            "homogenization-rates",
+            "mfg-foundations"
+          ]
+        },
+        {
+          "id": "mfg-longtime",
+          "zh": "长期行为与 discount",
+          "en": "Long-time & discount",
+          "summary": "遍历 MFG、折扣极限与长期极限之间的关系。",
+          "refs": [],
+          "questions": [
+            "能否比较 HJ 单方程与 MFG 系统的选择机制？"
+          ],
+          "links": [
+            "discount-classical",
+            "mfg-foundations"
+          ]
+        },
+        {
+          "id": "mfg-second-order",
+          "zh": "二阶与主方程",
+          "en": "Second-order MFG & master equation",
+          "summary": "扩散、主方程、公共噪声及正则性。",
+          "refs": [],
+          "questions": [
+            "何种条件支持稳定的定量逼近？"
+          ],
+          "links": [
+            "mfg-foundations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "systems",
+      "zh": "方程组与随机控制",
+      "en": "Systems & Control",
+      "desc": "Weak coupling, switching, representation formulas and degenerate diffusion.",
+      "accent": "#ab8b36",
+      "topics": [
+        {
+          "id": "weak-coupling",
+          "zh": "弱耦合 HJ 方程组",
+          "en": "Weakly coupled HJ systems",
+          "summary": "耦合比较、半群、解选择与长期行为。",
+          "refs": [
+            "dz2017",
+            "mt2014"
+          ],
+          "questions": [
+            "一般退化耦合矩阵下，选择及速率理论能否统一？"
+          ],
+          "links": [
+            "fast-switching",
+            "comparison"
+          ]
+        },
+        {
+          "id": "control-representation",
+          "zh": "随机控制与表示公式",
+          "en": "Stochastic control representations",
+          "summary": "随机切换、动态规划与作用量表示。",
+          "refs": [
+            "dz2017"
+          ],
+          "questions": [
+            "随机控制表示能否改进耦合均匀化的定量估计？"
+          ],
+          "links": [
+            "fast-switching",
+            "weak-coupling"
+          ]
+        },
+        {
+          "id": "vanishing-viscosity",
+          "zh": "Vanishing viscosity",
+          "en": "Vanishing viscosity",
+          "summary": "退化或小扩散扰动下的极限与解选择。",
+          "refs": [
+            "mnt2026"
+          ],
+          "questions": [
+            "Hamiltonian 的解析性和井结构如何影响选择？"
+          ],
+          "links": [
+            "discount-viscosity",
+            "mfg-second-order"
+          ]
+        }
+      ]
+    }
+  ]
+}
