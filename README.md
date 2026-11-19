@@ -1,3 +1,9 @@
+# HJ Atlas — updated research development map (2026-11-19)
+
+**Deployment**: upload this repository to GitHub Pages. The root `index.html` is self-contained, with 111 indexed works, 18 research tracks, all topic-affiliated paper nodes displayed, and a map locator.
+
+The older `assets/app.js` and `assets/style.css` are kept for archival compatibility only and are **not referenced** by the current standalone homepage. The `data/atlas.json` export shares the same 111-record data model as the homepage (including 18 tracks and verified relations). No `+N more` node truncation remains.
+
 # HJ Atlas
 
 A community-editable index of research papers on Hamilton–Jacobi equations and related areas. It is a **selective literature resource**, not a ranking, review-approval system, or comprehensive bibliography.
